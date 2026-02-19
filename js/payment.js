@@ -16,8 +16,8 @@
     var ASAAS_SANDBOX = false;
 
     var PLAN_LABELS = {
-        'starter':      'Starter — R$ 147/mês',
-        'basico':       'Básico — R$ 447/mês',
+        'starter':      'Starter — R$ 197/mês',
+        'basico':       'Básico — R$ 397/mês',
         'profissional': 'Profissional — R$ 697/mês',
         'premium':      'Premium — R$ 997/mês'
     };

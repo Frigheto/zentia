@@ -22,7 +22,7 @@
     var PLANS = {
         'starter': {
             label: 'Starter',
-            price: 'R$ 147',
+            price: 'R$ 197',
             note: '+ Integração mensal de R$ 77',
             features: [
                 'Chat conectado na plataforma',
@@ -36,7 +36,7 @@
         },
         'basico': {
             label: 'Básico',
-            price: 'R$ 447',
+            price: 'R$ 397',
             note: '',
             features: [
                 'IA de atendimento',
