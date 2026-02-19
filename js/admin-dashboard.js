@@ -20,8 +20,16 @@
 
     // DOMContentLoaded
     document.addEventListener('DOMContentLoaded', async function () {
+        // Aguarda um pouco para admin-auth.js definir window.adminAuth
+        let retries = 0;
+        while (!window.adminAuth && retries < 10) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+            retries++;
+        }
+
         // Verifica autenticação
-        if (!window.adminAuth.isAuthenticated()) {
+        if (!window.adminAuth || !window.adminAuth.isAuthenticated()) {
+            console.log('[Dashboard] Não autenticado, redirecionando para login');
             window.location.href = '../admin-login.html';
             return;
         }
