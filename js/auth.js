@@ -60,19 +60,30 @@
         });
         if (result.error) throw result.error;
 
-        // Cria registro em profiles automaticamente após signup
+        // Tenta criar registro em profiles (sem chave service role, apenas tenta)
         if (result.data && result.data.user && result.data.user.id) {
             try {
-                await supabase.from('profiles').insert({
-                    id: result.data.user.id,
-                    email: email,
-                    full_name: name || '',
-                    plan: null
-                });
-                console.log('[Auth] Perfil criado em profiles:', result.data.user.id);
+                console.log('[Auth] Tentando criar perfil para:', result.data.user.id);
+
+                // Aguarda um pouco para o usuário ser criado no auth
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                const insertResult = await supabase
+                    .from('profiles')
+                    .insert({
+                        id: result.data.user.id,
+                        email: email,
+                        full_name: name || '',
+                        plan: null
+                    });
+
+                if (insertResult.error) {
+                    console.warn('[Auth] Aviso ao criar perfil:', insertResult.error);
+                } else {
+                    console.log('[Auth] Perfil criado com sucesso');
+                }
             } catch (profileError) {
                 console.error('[Auth] Erro ao criar perfil:', profileError);
-                // Não bloqueia o signup se falhar criar o perfil
             }
         }
 
