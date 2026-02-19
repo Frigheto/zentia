@@ -1,5 +1,5 @@
 /**
- * auth-page.js — ZENT I.A.
+ * auth-page.js — ZENT A.I.
  * Lógica da página auth.html: tabs login/cadastro, submit, feedback.
  * Depende de js/auth.js (window.zentAuth).
  */

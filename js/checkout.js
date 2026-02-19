@@ -1,5 +1,5 @@
 /**
- * checkout.js — ZENT I.A.
+ * checkout.js — ZENT A.I.
  * Lógica da página de checkout: lê o plano da URL, exibe resumo, valida e redireciona para Asaas.
  *
  * URL esperada: checkout.html?plan=profissional
@@ -196,7 +196,7 @@
         }
 
         // Atualiza <title>
-        document.title = 'Assinar ' + data.label + ' — ZENT I.A.';
+        document.title = 'Assinar ' + data.label + ' — ZENT A.I.';
     }
 
     // ----------------------------------------------------------------

@@ -1,5 +1,5 @@
 /**
- * auth.js — ZENT I.A.
+ * auth.js — ZENT A.I.
  * Utilitários de autenticação com Supabase.
  * Expõe window.zentAuth para uso em qualquer página.
  *

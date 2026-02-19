@@ -1,5 +1,5 @@
 /**
- * members-page.js — ZENT I.A.
+ * members-page.js — ZENT A.I.
  * Lógica da área de membros: auth guard, perfil do usuário, conta, senha.
  * Depende de js/auth.js (window.zentAuth).
  *
@@ -186,7 +186,7 @@
             window.zentAuth.getProfile().then(function (profile) {
                 var plan = (profile && profile.plan) || '';
                 var heroBadge = document.getElementById('m-hero-badge');
-                if (heroBadge) heroBadge.textContent = PLAN_LABELS[plan] || 'Membro ZENT I.A.';
+                if (heroBadge) heroBadge.textContent = PLAN_LABELS[plan] || 'Membro ZENT A.I.';
 
                 // Aplica restrição de conteúdo baseada no plano
                 // Isso define _currentUserPlan e garante que o upsell seja exibido/ocultado corretamente

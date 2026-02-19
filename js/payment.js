@@ -1,5 +1,5 @@
 /**
- * payment.js — ZENT I.A.
+ * payment.js — ZENT A.I.
  * Mantém os links de pagamento Asaas para referência e exibe botão
  * de pagamento após captação de lead pelo formulário de demonstração.
  *
