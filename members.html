@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Membros — ZENT I.A.</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.82em%22 font-size=%2268%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 x=%2250%22 text-anchor=%22middle%22>Z</text></svg>">
+</head>
+
+<body class="members-page">
+
+    <!-- ===== HEADER ===== -->
+    <header class="m-header" id="m-header">
+        <div class="m-header-inner">
+            <div class="m-header-left">
+                <a href="members.html" class="m-logo">ZENT<span>I.A.</span></a>
+                <nav class="m-nav">
+                    <a href="#inicio" class="m-nav-link active" data-tab="inicio">Início</a>
+                    <a href="#suporte" class="m-nav-link" data-tab="suporte">Suporte</a>
+                    <a href="#ajuda" class="m-nav-link" data-tab="tutoriais">Tutoriais</a>
+                    <a href="#conta" class="m-nav-link" data-tab="conta">Minha Conta</a>
+                </nav>
+            </div>
+            <div class="m-header-right">
+                <div class="m-user-menu">
+                    <div class="m-user-avatar" id="m-user-avatar">M</div>
+                    <span class="m-user-name" id="m-user-name">Carregando...</span>
+                    <svg class="m-user-caret" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <div class="m-user-dropdown">
+                        <a href="#conta" class="m-dropdown-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Minha conta
+                        </a>
+                        <div class="m-dropdown-divider"></div>
+                        <button type="button" class="m-dropdown-item m-dropdown-item--danger" id="m-logout-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            Sair
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="m-hero" id="inicio" data-page="inicio" style="padding-top: 64px;">
+        <div class="m-hero-bg"></div>
+        <div class="m-hero-content">
+            <div class="m-hero-badge" id="m-hero-badge">Plano Starter</div>
+            <h1 class="m-hero-title">Bem-vindo à sua<br>área de membros</h1>
+            <p class="m-hero-sub">Acesse sua plataforma, aprenda a configurá-la e gerencie sua assinatura, tudo em um só
+                lugar.</p>
+            <div class="m-hero-actions">
+                <a href="https://app.zentia.com.br" target="_blank" rel="noopener noreferrer"
+                    class="m-btn m-btn--primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Acessar plataforma
+                </a>
+                <button type="button" class="m-btn m-btn--ghost" data-tab-btn="tutoriais">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    Ver tutoriais
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="m-main">
+
+        <!-- ===== TELA SEM PLANO (upsell) ===== -->
+        <section class="m-no-plan" id="m-no-plan" style="display:none">
+            <div class="m-no-plan-inner">
+                <div class="m-no-plan-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h2>Escolha seu plano</h2>
+                <p>Assine um plano para acessar os tutoriais, suporte e todos os recursos da plataforma ZENT I.A.</p>
+                <div class="m-no-plan-grid">
+
+                    <a href="checkout.html?plan=starter" class="m-no-plan-card">
+                        <span class="m-no-plan-card-name">Starter</span>
+                        <span class="m-no-plan-card-price">R$ 147<small>/mês</small></span>
+                        <ul>
+                            <li>Chat conectado na plataforma</li>
+                            <li>CRM + Google Agenda</li>
+                            <li>Até 500 leads · 1 usuário</li>
+                        </ul>
+                        <span class="m-no-plan-card-cta">Assinar →</span>
+                    </a>
+
+                    <a href="checkout.html?plan=basico" class="m-no-plan-card">
+                        <span class="m-no-plan-card-name">Básico</span>
+                        <span class="m-no-plan-card-price">R$ 447<small>/mês</small></span>
+                        <ul>
+                            <li>IA de atendimento</li>
+                            <li>Gerenciamento de redes sociais</li>
+                            <li>Até 1.000 leads · 3 usuários</li>
+                        </ul>
+                        <span class="m-no-plan-card-cta">Assinar →</span>
+                    </a>
+
+                    <a href="checkout.html?plan=profissional" class="m-no-plan-card m-no-plan-card--highlight">
+                        <span class="m-no-plan-card-badge">Popular</span>
+                        <span class="m-no-plan-card-name">Profissional</span>
+                        <span class="m-no-plan-card-price">R$ 697<small>/mês</small></span>
+                        <ul>
+                            <li>Agente SDR + marketing</li>
+                            <li>Disparo de mensagens</li>
+                            <li>Até 5.000 leads · 5 usuários</li>
+                        </ul>
+                        <span class="m-no-plan-card-cta">Assinar →</span>
+                    </a>
+
+                    <a href="checkout.html?plan=premium" class="m-no-plan-card">
+                        <span class="m-no-plan-card-name">Premium</span>
+                        <span class="m-no-plan-card-price">R$ 997<small>/mês</small></span>
+                        <ul>
+                            <li>Agente de IA completo</li>
+                            <li>Leads ilimitados · 10 usuários</li>
+                            <li>Suporte VIP (1h de call)</li>
+                        </ul>
+                        <span class="m-no-plan-card-cta">Assinar →</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ───── ROW: Acesso rápido ───── -->
+        <section class="m-row m-plan-content" data-page="inicio">
+            <h2 class="m-row-title">Acesso rápido</h2>
+            <div class="m-cards-track">
+
+                <!-- Plataforma -->
+                <a href="https://app.zentia.com.br" target="_blank" rel="noopener noreferrer"
+                    class="m-feature-card m-feature-card--platform">
+                    <div class="m-feature-card-thumb">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <div class="m-feature-card-body">
+                        <span class="m-feature-card-label">Plataforma</span>
+                        <strong class="m-feature-card-name">ZENT I.A.</strong>
+                        <p class="m-feature-card-desc">Acesse CRM, IA, automações e mais</p>
+                    </div>
+                    <div class="m-feature-card-arrow">→</div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer"
+                    class="m-feature-card m-feature-card--whatsapp">
+                    <div class="m-feature-card-thumb">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.112 1.529 5.836L0 24l6.336-1.5A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.012-1.374l-.36-.214-3.727.977.996-3.647-.235-.374A9.818 9.818 0 1 1 12 21.818z" />
+                        </svg>
+                    </div>
+                    <div class="m-feature-card-body">
+                        <span class="m-feature-card-label">Suporte</span>
+                        <strong class="m-feature-card-name">WhatsApp</strong>
+                        <p class="m-feature-card-desc">Fale com nossa equipe agora</p>
+                    </div>
+                    <div class="m-feature-card-arrow">→</div>
+                </a>
+
+                <!-- E-mail -->
+                <a href="mailto:suporte@zent.com.br" class="m-feature-card m-feature-card--email">
+                    <div class="m-feature-card-thumb">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="m-feature-card-body">
+                        <span class="m-feature-card-label">Suporte</span>
+                        <strong class="m-feature-card-name">E-mail</strong>
+                        <p class="m-feature-card-desc">suporte@zent.com.br</p>
+                    </div>
+                    <div class="m-feature-card-arrow">→</div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ───── ROW: Suporte ───── -->
+        <section class="m-row m-plan-content" id="suporte" data-page="suporte">
+            <h2 class="m-row-title">Suporte</h2>
+            <div class="m-cards-track">
+
+                <div class="m-support-card">
+                    <div class="m-support-icon m-support-icon--blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Chat ao vivo</h3>
+                    <p>Atendimento de segunda a sexta, das 9h às 18h.</p>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer"
+                        class="m-support-link">Iniciar conversa →</a>
+                </div>
+
+                <div class="m-support-card">
+                    <div class="m-support-icon m-support-icon--green">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Status do sistema</h3>
+                    <p>Verifique a disponibilidade dos serviços em tempo real.</p>
+                    <a href="#" class="m-support-link">Ver status →</a>
+                </div>
+
+                <div class="m-support-card">
+                    <div class="m-support-icon m-support-icon--purple">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Base de conhecimento</h3>
+                    <p>Artigos e documentação técnica detalhada.</p>
+                    <a href="#ajuda" class="m-support-link">Ver artigos →</a>
+                </div>
+
+                <div class="m-support-card">
+                    <div class="m-support-icon m-support-icon--orange">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.64 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Agendar call</h3>
+                    <p>Sessão de onboarding ou suporte técnico ao vivo.</p>
+                    <a href="#" class="m-support-link">Agendar →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ───── ROW: Tutoriais ───── -->
+        <section class="m-row m-plan-content" id="ajuda" data-page="tutoriais">
+            <h2 class="m-row-title">Implemente seu projeto agora — Veja como</h2>
+            <div class="m-video-track" id="m-video-track">
+
+                <div class="m-video-card" data-min-plan="starter">
+                    <div class="m-video-thumb m-video-thumb--1">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">12:30</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 01</span>
+                        <h4>Primeiros passos na plataforma</h4>
+                        <p>Como fazer login, navegar e configurar seu perfil inicial.</p>
+                    </div>
+                </div>
+
+                <div class="m-video-card" data-min-plan="starter">
+                    <div class="m-video-thumb m-video-thumb--2">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">18:45</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 02</span>
+                        <h4>Configurando o CRM</h4>
+                        <p>Importar leads, criar pipelines e automatizar follow-ups.</p>
+                    </div>
+                </div>
+
+                <div class="m-video-card" data-min-plan="basico">
+                    <div class="m-video-thumb m-video-thumb--3">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">22:10</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 03</span>
+                        <h4>Conectando o WhatsApp</h4>
+                        <p>Integração com WhatsApp Business e automação de mensagens.</p>
+                    </div>
+                </div>
+
+                <div class="m-video-card" data-min-plan="basico">
+                    <div class="m-video-thumb m-video-thumb--4">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">15:20</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 04</span>
+                        <h4>Google Agenda integrada</h4>
+                        <p>Sincronizar agenda, criar eventos automáticos e lembretes.</p>
+                    </div>
+                </div>
+
+                <div class="m-video-card" data-min-plan="profissional">
+                    <div class="m-video-thumb m-video-thumb--5">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">28:00</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 05</span>
+                        <h4>Agente de IA — SDR</h4>
+                        <p>Configurar o agente para qualificar e converter leads automaticamente.</p>
+                    </div>
+                </div>
+
+                <div class="m-video-card" data-min-plan="premium">
+                    <div class="m-video-thumb m-video-thumb--6">
+                        <div class="m-play-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <span class="m-video-duration">19:55</span>
+                    </div>
+                    <div class="m-video-info">
+                        <span class="m-video-ep">Aula 06</span>
+                        <h4>Redes sociais e marketing</h4>
+                        <p>Planejamento, agendamento e disparo de conteúdo automatizado.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ───── ROW: Minha conta ───── -->
+        <section class="m-row" id="conta" data-page="conta">
+            <h2 class="m-row-title">Minha conta</h2>
+            <div class="m-account-grid">
+
+                <div class="m-account-card">
+                    <div class="m-account-card-header">
+                        <div class="m-account-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Dados pessoais</h3>
+                    </div>
+                    <div class="m-account-form">
+                        <div class="m-form-group">
+                            <label>Nome completo</label>
+                            <input type="text" id="acc-name" placeholder="Seu nome" autocomplete="name">
+                        </div>
+                        <div class="m-form-group">
+                            <label>E-mail</label>
+                            <input type="email" id="acc-email" placeholder="Seu e-mail" readonly>
+                        </div>
+                        <button type="button" class="m-btn m-btn--save" id="acc-save-btn">Salvar alterações</button>
+                        <span class="m-save-msg" id="acc-save-msg"></span>
+                    </div>
+                </div>
+
+                <div class="m-account-card">
+                    <div class="m-account-card-header">
+                        <div class="m-account-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3>Alterar senha</h3>
+                    </div>
+                    <div class="m-account-form">
+                        <div class="m-form-group">
+                            <label>Nova senha</label>
+                            <input type="password" id="acc-new-pass" placeholder="Mínimo 8 caracteres" minlength="8">
+                        </div>
+                        <div class="m-form-group">
+                            <label>Confirmar senha</label>
+                            <input type="password" id="acc-confirm-pass" placeholder="Repita a nova senha">
+                        </div>
+                        <button type="button" class="m-btn m-btn--save" id="acc-pass-btn">Atualizar senha</button>
+                        <span class="m-save-msg" id="acc-pass-msg"></span>
+                    </div>
+                </div>
+
+                <div class="m-account-card">
+                    <div class="m-account-card-header">
+                        <div class="m-account-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
+                        <h3>Assinatura</h3>
+                    </div>
+                    <div class="m-subscription-info">
+                        <div class="m-sub-row">
+                            <span>Plano atual</span>
+                            <strong id="acc-plan-name">—</strong>
+                        </div>
+                        <div class="m-sub-row">
+                            <span>Status</span>
+                            <span class="m-sub-badge m-sub-badge--active">Ativo</span>
+                        </div>
+                        <div class="m-sub-row">
+                            <span>Membro desde</span>
+                            <strong id="acc-member-since">—</strong>
+                        </div>
+                        <a href="index.html#precos" class="m-btn m-btn--outline-sm">Mudar de plano</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="m-footer">
+        <div class="m-footer-inner">
+            <span class="m-footer-logo">ZENT<span>I.A.</span></span>
+            <nav class="m-footer-nav">
+                <a href="#inicio" data-tab="inicio">Início</a>
+                <a href="#suporte" data-tab="suporte">Suporte</a>
+                <a href="#ajuda" data-tab="tutoriais">Tutoriais</a>
+                <a href="#conta" data-tab="conta">Minha Conta</a>
+            </nav>
+            <p class="m-footer-copy">© 2025 ZENT I.A. — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/members-page.js"></script>
+</body>
+
+</html>

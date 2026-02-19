@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENT I.A. — Plataforma de Gestão para Empresas</title>
+    <meta name="description"
+        content="Centralize CRM, marketing, automações e IA em um só lugar. A plataforma completa para empresas de qualquer tamanho organizarem seu fluxo comercial do lead ao fechamento.">
+    <meta name="keywords"
+        content="CRM omnichannel, gestão empresarial, plataforma all-in-one, automação de leads, marketing digital, ZENT IA">
+    <meta name="author" content="ZENT I.A.">
+    <link rel="canonical" href="https://zentia.com.br/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zentia.com.br/">
+    <meta property="og:title" content="ZENT I.A. — Plataforma de Gestão para Empresas">
+    <meta property="og:description"
+        content="Centralize CRM, marketing, automações e IA. Organize sua empresa do lead ao fechamento.">
+    <meta property="og:image" content="https://zentia.com.br/assets/og-image.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="ZENT I.A.">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZENT I.A. — Gestão para Empresas">
+    <meta name="twitter:description"
+        content="CRM, marketing, automações e IA em um só lugar para empresas de qualquer setor.">
+    <meta name="twitter:image" content="https://zentia.com.br/assets/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ZENT I.A.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Plataforma de gestão completa para empresas de qualquer setor. CRM, marketing, automações e agentes de IA.",
+        "url": "https://zentia.com.br",
+        "offers": [
+            { "@type": "Offer", "name": "Starter", "price": "27.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "name": "Básico", "price": "87.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "name": "Profissional", "price": "139.90", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
+            { "@type": "Offer", "name": "Premium", "price": "199.90", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        ],
+        "provider": { "@type": "Organization", "name": "ZENT I.A.", "url": "https://zentia.com.br" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "500" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "Preciso de conhecimento técnico?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A plataforma é simples e intuitiva, com configuração assistida." } },
+            { "@type": "Question", "name": "Quanto tempo leva para configurar?", "acceptedAnswer": { "@type": "Answer", "text": "Menos de 3 horas com suporte durante toda a configuração." } },
+            { "@type": "Question", "name": "A IA funciona para qualquer ramo de negócio?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Nossa IA é treinada para trabalhar com qualquer tipo de empresa e setor." } },
+            { "@type": "Question", "name": "Posso migrar de outro CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Migração gratuita e assistida pela nossa equipe." } }
+        ]
+    }
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.82em%22 font-size=%2268%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 x=%2250%22 text-anchor=%22middle%22>Z</text></svg>">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                ZENT<span>I.A.</span>
+            </a>
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#precos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </nav>
+            <!-- Actions -->
+            <div class="header-actions">
+                <div class="user-menu-wrapper" id="user-menu-wrapper" style="display: none;">
+                    <button id="header-user-btn" class="user-menu-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span id="user-menu-name">Usuário</span>
+                    </button>
+                    <div class="user-menu-dropdown" id="user-menu-dropdown">
+                        <a href="members.html" class="user-menu-item">Minha Área</a>
+                        <button id="header-logout-btn" class="user-menu-item user-menu-logout">Sair da Conta</button>
+                    </div>
+                </div>
+                <a href="auth.html" id="header-login-btn" class="login-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Entrar
+                </a>
+                <a href="#precos" id="header-plan-btn" class="btn btn-primary">Ver Planos</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text-center">
+                <div class="hero-badge">Plataforma para Sua Empresa</div>
+                <h1 class="hero-title">Organize seu negócio.<br>Aumente sua receita.</h1>
+                <p class="hero-subtitle">CRM, marketing, automações e IA em um só lugar. Do lead ao fechamento, com
+                    controle total.</p>
+                <div class="hero-cta">
+                    <a href="#precos" class="btn btn-primary btn-lg shine-effect">
+                        Começar Agora
+                    </a>
+                    <a href="#contato" class="btn btn-outline btn-lg">
+                        Agendar Demonstração
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>500+</strong>
+                        <span>empresas atendidas</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>4.8/5</strong>
+                        <span>avaliação média</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>3h</strong>
+                        <span>para configurar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full-Width 3D Carousel at Bottom -->
+            <div class="cards-carousel-wrapper">
+                <button class="carousel-nav carousel-prev" aria-label="Anterior">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <div class="cards-stack">
+                    <div class="cards-track">
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=600&auto=format&fit=crop"
+                                alt="Suporte 24h">
+                            <div class="card-info">
+                                <h3>Suporte 24h</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=600&auto=format&fit=crop"
+                                alt="Atendimento IA">
+                            <div class="card-info">
+                                <h3>Atendimento IA</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop"
+                                alt="Gestão Centralizada">
+                            <div class="card-info">
+                                <h3>Gestão Centralizada</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1551808525-51a94da548ce?q=80&w=600&auto=format&fit=crop"
+                                alt="Automação 24/7">
+                            <div class="card-info">
+                                <h3>Automação 24/7</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop"
+                                alt="CRM Inteligente">
+                            <div class="card-info">
+                                <h3>CRM Inteligente</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+                                alt="Dashboard">
+                            <div class="card-info">
+                                <h3>Dashboard</h3>
+                            </div>
+                        </a>
+                        <a href="#solucoes" class="photo-card"><img
+                                src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=600&auto=format&fit=crop"
+                                alt="WhatsApp">
+                            <div class="card-info">
+                                <h3>WhatsApp</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-next" aria-label="Próximo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Trust Badges / Partners -->
+        <section class="trust-section">
+            <div class="container">
+                <p class="trust-label">Tecnologia das melhores plataformas do mundo</p>
+                <div class="logos-grid">
+                    <div class="logo-item">Parceiro Google</div>
+                    <div class="logo-item">Meta Business</div>
+                    <div class="logo-item">AWS Activate</div>
+                    <div class="logo-item">Stripe</div>
+                    <div class="logo-item">GoHighLevel</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="problem-section" id="solucoes">
+            <div class="container">
+                <div class="problem-grid">
+                    <div class="problem-header">
+                        <span class="section-tag">O problema que toda empresa enfrenta</span>
+                        <h2 class="section-title">O caos operacional está travando o crescimento do seu negócio.</h2>
+                        <p class="section-desc">Enquanto você resolve urgências todos os dias, dinheiro e oportunidades
+                            continuam escapando sem que você perceba.</p>
+                        <a href="#solucoes" class="btn btn-primary">Ver a solução</a>
+                    </div>
+                    <div class="problem-items">
+                        <div class="problem-item">
+                            <div class="problem-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.34 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.26 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="problem-content">
+                                <h4>WhatsApp lotado, leads perdidos</h4>
+                                <p>Mensagens esquecidas e follow-ups que nunca acontecem. Leads quentes viram leads
+                                    frios.</p>
+                            </div>
+                        </div>
+                        <div class="problem-item">
+                            <div class="problem-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="problem-content">
+                                <h4>Planilhas espalhadas, retrabalho constante</h4>
+                                <p>Informações duplicadas em vários lugares. Ninguém sabe qual versão é a certa.</p>
+                            </div>
+                        </div>
+                        <div class="problem-item">
+                            <div class="problem-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                            </div>
+                            <div class="problem-content">
+                                <h4>Sem métricas claras para decidir</h4>
+                                <p>Você toma decisões baseado em feeling, não em dados. O crescimento fica imprevisível.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Comparativo</span>
+                    <h2 class="section-title">Gestão fragmentada vs. Negócio organizado</h2>
+                    <p class="section-desc">Veja a diferença de ter tudo em um só lugar.</p>
+                </div>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Atividade</th>
+                                <th class="text-center col-bad">Sem ZENT</th>
+                                <th class="text-center col-good">Com ZENT I.A.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gestão de Leads</td>
+                                <td class="text-center col-bad">Planilhas e WhatsApp pessoal</td>
+                                <td class="text-center col-good"><strong>Centralizada e automática</strong></td>
+                            </tr>
+                            <tr>
+                                <td>CRM</td>
+                                <td class="text-center col-bad">Post-its ou software genérico</td>
+                                <td class="text-center col-good"><strong>Totalmente integrado</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Marketing</td>
+                                <td class="text-center col-bad">Agência desconectada</td>
+                                <td class="text-center col-good"><strong>Integrado ao comercial</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Visão do negócio</td>
+                                <td class="text-center col-bad">"Acho que..."</td>
+                                <td class="text-center col-good"><strong>Dashboard em tempo real</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="roi-banner">
+                    <p>O problema não é a sua equipe. <strong>É a falta de um sistema que organize, integre e dê
+                            previsibilidade à operação.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Tabs) -->
+        <section id="recursos" class="features-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Funcionalidades</span>
+                    <h2 class="section-title">Tudo o que sua empresa precisa em um só lugar</h2>
+                    <p class="section-desc">Da aquisição do lead ao fechamento da venda.</p>
+                </div>
+
+                <div style="text-align:center;">
+                    <div class="feature-tabs">
+                        <button class="tab-btn active" data-target="feature-1">Gestão e Painel</button>
+                        <button class="tab-btn" data-target="feature-2">CRM Inteligente</button>
+                        <button class="tab-btn" data-target="feature-3">Marketing e Funis</button>
+                        <button class="tab-btn" data-target="feature-4">IA e Automação</button>
+                    </div>
+                </div>
+
+                <div class="feature-content">
+                    <!-- Feature 1: Gestão -->
+                    <div class="feature-panel active" id="feature-1">
+                        <div class="feature-text">
+                            <h3>Gestão e Painel de Controle</h3>
+                            <p>Seus números em tempo real. Tome decisões baseadas em dados, não em suposições.</p>
+                            <ul class="feature-list">
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Pipeline visual</strong>: Do lead ao fechamento
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Previsibilidade</strong>: Saiba quanto vai faturar
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Relatórios</strong>: KPIs atualizados em tempo real
+                                </li>
+                            </ul>
+                            <a href="#precos" class="btn btn-primary">Ver o painel</a>
+                        </div>
+                        <div class="feature-image">
+                            <div class="ui-dashboard">
+                                <div class="dash-header">
+                                    <div class="dash-title">Painel Geral</div>
+                                    <div class="dash-date">Jan 2026 — Fev 2026</div>
+                                </div>
+                                <div class="dash-kpis">
+                                    <div class="kpi-card">
+                                        <div class="kpi-label">Oportunidades</div>
+                                        <div class="kpi-value">8</div>
+                                        <div class="kpi-bar">
+                                            <div class="kpi-fill" style="width:100%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="kpi-card kpi-highlight">
+                                        <div class="kpi-label">Valor em Pipeline</div>
+                                        <div class="kpi-value">R$ 14,09k</div>
+                                        <div class="kpi-trend">+100% vs 30 dias</div>
+                                    </div>
+                                    <div class="kpi-card">
+                                        <div class="kpi-label">Taxa de Conversão</div>
+                                        <div class="kpi-value">32%</div>
+                                        <div class="kpi-bar">
+                                            <div class="kpi-fill" style="width:32%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash-funnel">
+                                    <div class="funnel-title">Funil de Vendas</div>
+                                    <div class="funnel-stage">
+                                        <span class="funnel-label">Novo Lead</span>
+                                        <div class="funnel-bar">
+                                            <div class="funnel-fill" style="width:100%;background:#3b82f6">8 leads</div>
+                                        </div>
+                                        <span class="funnel-value">R$ 14,09k</span>
+                                    </div>
+                                    <div class="funnel-stage">
+                                        <span class="funnel-label">Follow Up</span>
+                                        <div class="funnel-bar">
+                                            <div class="funnel-fill" style="width:75%;background:#06b6d4">6 leads</div>
+                                        </div>
+                                        <span class="funnel-value">R$ 10,5k</span>
+                                    </div>
+                                    <div class="funnel-stage">
+                                        <span class="funnel-label">Call Agendada</span>
+                                        <div class="funnel-bar">
+                                            <div class="funnel-fill" style="width:47%;background:#a855f7">3 leads</div>
+                                        </div>
+                                        <span class="funnel-value">R$ 6,59k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: CRM -->
+                    <div class="feature-panel" id="feature-2">
+                        <div class="feature-text">
+                            <h3>CRM Inteligente e Omnichannel</h3>
+                            <p>Centralize leads, agenda e atendimento em uma única tela. WhatsApp, Instagram e chat
+                                unificados.</p>
+                            <ul class="feature-list">
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Agenda</strong>: Integrada ao Google Calendar
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Omnichannel</strong>: WhatsApp, Instagram e Chat em uma tela
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Leads</strong>: Gestão de contatos com histórico completo
+                                </li>
+                            </ul>
+                            <a href="#precos" class="btn btn-primary">Organizar comercial</a>
+                        </div>
+                        <div class="feature-image">
+                            <div class="ui-crm-demo">
+                                <div class="ui-crm-header">
+                                    <div class="ui-crm-contacts">Contatos</div>
+                                    <div class="ui-crm-pipeline">Seu Funil</div>
+                                </div>
+                                <div class="ui-crm-kanban">
+                                    <div class="ui-crm-col">
+                                        <div class="ui-crm-col-header">
+                                            <span>Novo Lead</span>
+                                            <span class="ui-crm-badge">3</span>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Patricia Silva</div>
+                                            <div class="ui-crm-type">Consultoria</div>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">João Ferreira</div>
+                                            <div class="ui-crm-type">E-commerce</div>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Marina Costa</div>
+                                            <div class="ui-crm-type">Tecnologia</div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-crm-col">
+                                        <div class="ui-crm-col-header">
+                                            <span>Follow Up</span>
+                                            <span class="ui-crm-badge">2</span>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Ana Rodrigues</div>
+                                            <div class="ui-crm-type">Varejo</div>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Roberto Santos</div>
+                                            <div class="ui-crm-type">Serviços</div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-crm-col">
+                                        <div class="ui-crm-col-header">
+                                            <span>Call Agendada</span>
+                                            <span class="ui-crm-badge">2</span>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Luciana Martins</div>
+                                            <div class="ui-crm-type">Manufatura</div>
+                                        </div>
+                                        <div class="ui-crm-card">
+                                            <div class="ui-crm-name">Gustavo Lima</div>
+                                            <div class="ui-crm-type">Saúde</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Marketing -->
+                    <div class="feature-panel" id="feature-3">
+                        <div class="feature-text">
+                            <h3>Marketing, Funis e Sites</h3>
+                            <p>Crie landing pages de alta conversão, gerencie suas redes sociais e automatize o
+                                marketing do seu escritório.</p>
+                            <ul class="feature-list">
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Marketing</strong>: Planejador de redes sociais integrado
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Funis e Sites</strong>: Criador de páginas de alta conversão
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Google Meu Negócio</strong>: Gestão de reputação online
+                                </li>
+                            </ul>
+                            <a href="#precos" class="btn btn-primary">Ferramentas de marketing</a>
+                        </div>
+                        <div class="feature-image">
+                            <div class="ui-marketing-demo">
+                                <div class="ui-marketing-header">
+                                    <div class="ui-marketing-title">Dashboard de Campanha</div>
+                                    <div class="ui-marketing-period">Janeiro 2026</div>
+                                </div>
+
+                                <div class="ui-marketing-kpis">
+                                    <div class="ui-kpi-card">
+                                        <div class="ui-kpi-icon">📊</div>
+                                        <div class="ui-kpi-info">
+                                            <div class="ui-kpi-label">Impressões</div>
+                                            <div class="ui-kpi-value">8.542</div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-kpi-card">
+                                        <div class="ui-kpi-icon">👆</div>
+                                        <div class="ui-kpi-info">
+                                            <div class="ui-kpi-label">Cliques</div>
+                                            <div class="ui-kpi-value">1.234</div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-kpi-card">
+                                        <div class="ui-kpi-icon">✓</div>
+                                        <div class="ui-kpi-info">
+                                            <div class="ui-kpi-label">Conversões</div>
+                                            <div class="ui-kpi-value">89</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui-marketing-graph">
+                                    <div class="ui-graph-bar">
+                                        <div class="ui-bar-label">Seg</div>
+                                        <div class="ui-bar-container">
+                                            <div class="ui-bar-fill" style="height:45%; background: linear-gradient(180deg, #3b82f6, #1e40af)"></div>
+                                        </div>
+                                        <div class="ui-bar-value">145</div>
+                                    </div>
+                                    <div class="ui-graph-bar">
+                                        <div class="ui-bar-label">Ter</div>
+                                        <div class="ui-bar-container">
+                                            <div class="ui-bar-fill" style="height:68%; background: linear-gradient(180deg, #06b6d4, #0891b2)"></div>
+                                        </div>
+                                        <div class="ui-bar-value">218</div>
+                                    </div>
+                                    <div class="ui-graph-bar">
+                                        <div class="ui-bar-label">Qua</div>
+                                        <div class="ui-bar-container">
+                                            <div class="ui-bar-fill" style="height:52%; background: linear-gradient(180deg, #8b5cf6, #6d28d9)"></div>
+                                        </div>
+                                        <div class="ui-bar-value">165</div>
+                                    </div>
+                                    <div class="ui-graph-bar">
+                                        <div class="ui-bar-label">Qui</div>
+                                        <div class="ui-bar-container">
+                                            <div class="ui-bar-fill" style="height:80%; background: linear-gradient(180deg, #ec4899, #db2777)"></div>
+                                        </div>
+                                        <div class="ui-bar-value">256</div>
+                                    </div>
+                                    <div class="ui-graph-bar">
+                                        <div class="ui-bar-label">Sex</div>
+                                        <div class="ui-bar-container">
+                                            <div class="ui-bar-fill" style="height:65%; background: linear-gradient(180deg, #f59e0b, #d97706)"></div>
+                                        </div>
+                                        <div class="ui-bar-value">208</div>
+                                    </div>
+                                </div>
+
+                                <div class="ui-marketing-channels-modern">
+                                    <div class="ui-channel-badge">
+                                        <span class="ui-channel-color" style="background: linear-gradient(135deg, #3b82f6, #06b6d4)"></span>
+                                        <span class="ui-channel-text">Google Ads</span>
+                                        <span class="ui-channel-percent">68%</span>
+                                    </div>
+                                    <div class="ui-channel-badge">
+                                        <span class="ui-channel-color" style="background: linear-gradient(135deg, #ec4899, #f97316)"></span>
+                                        <span class="ui-channel-text">Instagram</span>
+                                        <span class="ui-channel-percent">32%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: IA -->
+                    <div class="feature-panel" id="feature-4">
+                        <div class="feature-text">
+                            <h3>Agentes de IA e Automações</h3>
+                            <p>Agentes de IA que trabalham para você enquanto você foca no que importa: atender seus
+                                clientes.</p>
+                            <ul class="feature-list">
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Agentes de IA</strong>: SDR, atendimento e triagem automatizados
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Automações</strong>: Fluxos de trabalho que eliminam tarefas repetitivas
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <strong>Área de membros</strong>: Para infoprodutos e cursos online
+                                </li>
+                            </ul>
+                            <a href="#precos" class="btn btn-primary">Ver automações</a>
+                        </div>
+                        <div class="feature-image">
+                            <div class="ui-automation-demo">
+                                <div class="ui-automation-header">
+                                    <div class="ui-automation-title">Fluxo Automático de IA</div>
+                                    <div class="ui-automation-status">
+                                        <span class="ui-status-dot"></span>
+                                        <span class="ui-status-text">Ativo</span>
+                                    </div>
+                                </div>
+
+                                <div class="ui-workflow-pipeline">
+                                    <div class="ui-pipeline-step">
+                                        <div class="ui-step-circle">📧</div>
+                                        <div class="ui-step-label">
+                                            <div class="ui-step-title">Lead Recebido</div>
+                                            <div class="ui-step-desc">Email/WhatsApp</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-pipeline-connector">
+                                        <span class="ui-connector-arrow">→</span>
+                                    </div>
+
+                                    <div class="ui-pipeline-step">
+                                        <div class="ui-step-circle" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9)">🤖</div>
+                                        <div class="ui-step-label">
+                                            <div class="ui-step-title">Análise IA</div>
+                                            <div class="ui-step-desc">0.5s</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-pipeline-connector">
+                                        <span class="ui-connector-arrow">→</span>
+                                    </div>
+
+                                    <div class="ui-pipeline-step">
+                                        <div class="ui-step-circle" style="background: linear-gradient(135deg, #10b981, #059669)">✓</div>
+                                        <div class="ui-step-label">
+                                            <div class="ui-step-title">Qualificado</div>
+                                            <div class="ui-step-desc">CRM</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ui-automation-features">
+                                    <div class="ui-feature-row">
+                                        <div class="ui-feature-icon">⚡</div>
+                                        <div class="ui-feature-content">
+                                            <div class="ui-feature-title">Resposta Automática</div>
+                                            <div class="ui-feature-value">1.234 respostas/mês</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-feature-row">
+                                        <div class="ui-feature-icon">📅</div>
+                                        <div class="ui-feature-content">
+                                            <div class="ui-feature-title">Agendamento Inteligente</div>
+                                            <div class="ui-feature-value">89 reuniões/mês</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-feature-row">
+                                        <div class="ui-feature-icon">🔄</div>
+                                        <div class="ui-feature-content">
+                                            <div class="ui-feature-title">Follow-up Automático</div>
+                                            <div class="ui-feature-value">3 toques por lead</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Empresas ativas na plataforma</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3h</div>
+                        <div class="stat-label">Tempo médio de configuração</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">Avaliação média dos usuários</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Aumento médio em conversões</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof / Testimonials -->
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Depoimentos</span>
+                    <h2 class="section-title">O que nossos clientes dizem</h2>
+                    <p class="section-desc">Empresas reais com resultados reais.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Finalmente consegui organizar minha empresa. Antes era uma bagunça
+                            de planilhas e mensagens perdidas. Agora tenho controle total dos leads, do marketing e do
+                            financeiro em um só lugar."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <strong>João Silva</strong>
+                                <span>Fundador da Silva Consultoria</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"Implantamos em menos de 3 horas e já no primeiro mês nosso time
+                            converteu 40% mais leads. O suporte é excelente e a plataforma é muito intuitiva para quem
+                            não é da área de tecnologia."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info">
+                                <strong>Maria Costa</strong>
+                                <span>Diretora da Costa E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">"O agente de IA faz o primeiro contato com o lead antes de eu chegar
+                            ao escritório. Quando entro na plataforma já está tudo organizado. Aumentei minha capacidade
+                            sem contratar ninguém."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CF</div>
+                            <div class="author-info">
+                                <strong>Carlos Ferreira</strong>
+                                <span>Diretor de Operações, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="precos" class="pricing-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Planos</span>
+                    <h2 class="section-title">Planos ZENT</h2>
+                    <p class="section-desc">Escolha o plano certo para organizar, converter e escalar com clareza.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Starter</h3>
+                            <div class="price">R$ 197<span>/mês</span></div>
+                            <p class="price-note">+ Integração mensal de R$ 77</p>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Chat conectado na plataforma
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>CRM</strong> + Google Agenda
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Dashboard de controle
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Até <strong>500 leads</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                1 usuário
+                            </li>
+                        </ul>
+                        <a href="checkout.html?plan=starter" class="btn btn-outline full-width plan-cta"
+                            data-plan="starter">Começar com Starter</a>
+                    </div>
+
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Básico</h3>
+                            <div class="price">R$ 397<span>/mês</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>IA de atendimento</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Chat conectado na plataforma
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>CRM</strong> + Google Agenda
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Gerenciamento de redes sociais
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Até <strong>1.000 leads</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                3 usuários
+                            </li>
+                        </ul>
+                        <a href="checkout.html?plan=basico" class="btn btn-primary full-width plan-cta"
+                            data-plan="basico">Começar com Básico</a>
+                    </div>
+
+                    <!-- Professional Plan -->
+                    <div class="pricing-card popular">
+                        <div class="badge-popular">Mais escolhido</div>
+                        <div class="plan-header">
+                            <h3>Profissional</h3>
+                            <div class="price">R$ 697<span>/mês</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>Agente SDR</strong> + marketing
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                CRM automatizado
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Google Agenda integrada
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Disparo de mensagens
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Planejador de redes sociais
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Até <strong>5.000 leads</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                5 usuários
+                            </li>
+                        </ul>
+                        <a href="checkout.html?plan=profissional" class="btn btn-primary full-width plan-cta"
+                            data-plan="profissional">Começar com Pro</a>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <div class="price">R$ 997<span>/mês</span></div>
+                        </div>
+                        <ul class="plan-features">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>Agente de IA completo</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                CRM automatizado
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Google Agenda integrada
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Disparo de mensagens
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>Leads ilimitados</strong>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                10 usuários
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <strong>Suporte VIP</strong> (1h de call)
+                            </li>
+                        </ul>
+                        <a href="checkout.html?plan=premium" class="btn btn-outline full-width plan-cta"
+                            data-plan="premium">Começar com Premium</a>
+                    </div>
+                </div>
+
+                <div class="pricing-guarantee">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <p>Todos os planos incluem suporte durante a configuração. Sem taxa de cancelamento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final + Lead Capture Form -->
+        <section id="contato" class="final-cta">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-text">
+                        <span class="section-tag">Demonstração gratuita</span>
+                        <h2>Pronto para organizar seu negócio?</h2>
+                        <p>Preencha o formulário e nossa equipe entra em contato para uma demonstração personalizada —
+                            sem compromisso.</p>
+                        <ul class="cta-benefits">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Configuração assistida e gratuita
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Migração de dados inclusa
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Suporte em português durante todo o processo
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cta-form-wrapper">
+                        <form id="lead-form" class="lead-form" novalidate>
+                            <!-- Honeypot anti-spam -->
+                            <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                                <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lead-name">Nome completo</label>
+                                <input type="text" id="lead-name" name="name" placeholder="Seu nome completo" required>
+                                <span class="form-error" id="error-name"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lead-email">E-mail profissional</label>
+                                <input type="email" id="lead-email" name="email" placeholder="seu@email.com" required>
+                                <span class="form-error" id="error-email"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lead-whatsapp">WhatsApp</label>
+                                <input type="tel" id="lead-whatsapp" name="phone" placeholder="(11) 99999-9999"
+                                    required>
+                                <span class="form-error" id="error-whatsapp"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lead-plan">Plano de interesse</label>
+                                <select id="lead-plan" name="plan">
+                                    <option value="">Selecione um plano</option>
+                                    <option value="starter">Starter — R$ 197/mês</option>
+                                    <option value="basico">Básico — R$ 397/mês</option>
+                                    <option value="profissional">Profissional — R$ 697/mês</option>
+                                    <option value="premium">Premium — R$ 997/mês</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary full-width" id="lead-submit">
+                                Agendar Demonstração
+                            </button>
+
+                            <div id="form-success" class="form-message form-success" style="display:none;">
+                                Redirecionando para o WhatsApp...
+                            </div>
+                            <div id="form-error-msg" class="form-message form-error-msg" style="display:none;">
+                                Preencha todos os campos obrigatórios.
+                            </div>
+                        </form>
+
+                        <script>
+                            (function () {
+                                var form = document.getElementById('lead-form');
+                                if (!form) return;
+                                form.addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    var name = document.getElementById('lead-name').value.trim();
+                                    var email = document.getElementById('lead-email').value.trim();
+                                    var phone = document.getElementById('lead-whatsapp').value.trim();
+                                    var plan = document.getElementById('lead-plan').value;
+                                    var planLabel = plan ? document.getElementById('lead-plan').options[document.getElementById('lead-plan').selectedIndex].text : 'Não informado';
+
+                                    if (!name || !email || !phone) {
+                                        document.getElementById('form-error-msg').style.display = 'block';
+                                        document.getElementById('form-success').style.display = 'none';
+                                        return;
+                                    }
+
+                                    document.getElementById('form-success').style.display = 'block';
+                                    document.getElementById('form-error-msg').style.display = 'none';
+
+                                    var msg = 'Olá! Gostaria de agendar uma demonstração da ZENT I.A.%0A%0A'
+                                        + '*Nome:* ' + encodeURIComponent(name) + '%0A'
+                                        + '*E-mail:* ' + encodeURIComponent(email) + '%0A'
+                                        + '*WhatsApp:* ' + encodeURIComponent(phone) + '%0A'
+                                        + '*Plano de interesse:* ' + encodeURIComponent(planLabel);
+
+                                    setTimeout(function () {
+                                        window.open('https://wa.me/55999466450?text=' + msg, '_blank');
+                                    }, 600);
+                                });
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="#" class="logo">ZENT<span>I.A.</span></a>
+                    <p>A plataforma completa para gestão, marketing e vendas da sua empresa.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#precos">Preços</a></li>
+                        <li><a href="#solucoes">Integrações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="/termos.html">Termos de uso</a></li>
+                        <li><a href="/privacidade.html">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZENT I.A. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/consent.js"></script>
+    <script type="module" src="js/analytics.js"></script>
+    <script type="module" src="js/form.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+    <!-- Autenticação Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

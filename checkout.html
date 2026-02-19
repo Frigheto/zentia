@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assinar — ZENT I.A.</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Finalize sua assinatura ZENT I.A.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.82em%22 font-size=%2268%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 x=%2250%22 text-anchor=%22middle%22>Z</text></svg>">
+</head>
+
+<body class="checkout-page">
+
+    <!-- Checkout Header -->
+    <header class="checkout-header-bar">
+        <div class="checkout-header-inner">
+            <a href="index.html" class="logo">ZENT<span>I.A.</span></a>
+            <div class="checkout-header-secure">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Pagamento seguro
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-main">
+        <div class="checkout-layout">
+
+            <!-- Coluna esquerda: resumo do plano -->
+            <aside class="checkout-plan-aside">
+                <div class="checkout-plan-card">
+                    <span class="checkout-plan-badge">Você escolheu</span>
+                    <h2 class="checkout-plan-name" id="plan-name">Carregando...</h2>
+                    <div class="checkout-plan-price">
+                        <span id="plan-price">—</span><span class="checkout-price-period">/mês</span>
+                    </div>
+                    <p class="checkout-plan-note" id="plan-note" style="display:none;"></p>
+
+                    <ul class="checkout-plan-features" id="plan-features">
+                        <!-- populado por checkout.js -->
+                    </ul>
+
+                    <div class="checkout-guarantee">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Sem taxa de cancelamento
+                    </div>
+                </div>
+
+                <a href="index.html#precos" class="checkout-back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    Alterar plano
+                </a>
+            </aside>
+
+            <!-- Coluna direita: formulário -->
+            <section class="checkout-form-section">
+                <div class="checkout-form-card">
+                    <!-- Info do usuário logado (populado por checkout.js) -->
+                    <div id="checkout-user-info" class="checkout-user-info" style="display:none;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Assinando como: <strong id="checkout-user-email"></strong>
+                    </div>
+
+                    <h1 class="checkout-form-title">Finalizar assinatura</h1>
+                    <p class="checkout-subtitle">Preencha seus dados para prosseguir ao pagamento.</p>
+
+                    <form id="checkout-form" novalidate>
+                        <!-- Honeypot anti-spam -->
+                        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="co-name">Nome completo</label>
+                            <input type="text" id="co-name" name="name" placeholder="Seu nome completo" required autocomplete="name">
+                            <span class="form-error" id="co-error-name"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="co-cpf">CPF</label>
+                            <input type="text" id="co-cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required inputmode="numeric">
+                            <span class="form-error" id="co-error-cpf"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="co-email">E-mail</label>
+                            <input type="email" id="co-email" name="email" placeholder="seu@email.com" required autocomplete="email">
+                            <span class="form-error" id="co-error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="co-phone">WhatsApp</label>
+                            <input type="tel" id="co-phone" name="phone" placeholder="(11) 99999-9999" required autocomplete="tel">
+                            <span class="form-error" id="co-error-phone"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary full-width" id="co-submit">
+                            Ir para pagamento
+                        </button>
+
+                        <p class="checkout-security-note">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            Seus dados são protegidos. Pagamento processado pelo Asaas.
+                        </p>
+                    </form>
+
+                    <!-- Exibido quando link não está configurado -->
+                    <div id="checkout-fallback" class="form-message form-success" style="display:none;">
+                        <strong>Recebemos seu interesse!</strong><br>
+                        Nossa equipe entrará em contato em breve para finalizar o seu acesso.
+                    </div>
+
+                    <!-- Plano inválido -->
+                    <div id="checkout-invalid" class="form-message form-error-msg" style="display:none;">
+                        Plano não encontrado. <a href="index.html#precos">Ver planos disponíveis</a>.
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>

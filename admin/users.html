@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários — Admin ZENT I.A.</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.82em%22 font-size=%2268%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 x=%2250%22 text-anchor=%22middle%22>Z</text></svg>">
+</head>
+<body class="admin-page">
+    <!-- ===== HEADER ===== -->
+    <header class="admin-header">
+        <div class="admin-header-inner">
+            <div class="admin-header-left">
+                <h1 class="admin-logo">👑 ZENT<span>I.A.</span></h1>
+                <nav class="admin-nav">
+                    <a href="dashboard.html" class="admin-nav-link">Dashboard</a>
+                    <a href="users.html" class="admin-nav-link active">Usuários</a>
+                    <a href="videos.html" class="admin-nav-link">Vídeos</a>
+                </nav>
+            </div>
+            <div class="admin-header-right">
+                <span class="admin-user-name" id="admin-user-name">—</span>
+                <button type="button" class="admin-btn admin-btn--small admin-btn--danger" onclick="window.adminLogout()">
+                    Sair
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <h2 class="admin-page-title">Gerenciar Usuários</h2>
+
+            <!-- ===== FILTERS ===== -->
+            <div class="admin-filters">
+                <input
+                    type="text"
+                    id="filter-search"
+                    class="admin-filter-input"
+                    placeholder="Buscar por nome ou e-mail..."
+                >
+                <select id="filter-plan" class="admin-filter-select">
+                    <option value="">Todos os planos</option>
+                    <option value="">Sem plano</option>
+                    <option value="starter">Starter</option>
+                    <option value="basico">Básico</option>
+                    <option value="profissional">Profissional</option>
+                    <option value="premium">Premium</option>
+                </select>
+            </div>
+
+            <!-- ===== USERS TABLE ===== -->
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Plano</th>
+                            <th>Cadastro</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody">
+                        <tr class="admin-table-loading">
+                            <td colspan="5">Carregando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ===== PAGINATION ===== -->
+            <div class="admin-pagination" id="users-pagination" style="display: none;">
+                <button type="button" class="admin-btn admin-btn--small" id="users-prev-btn">← Anterior</button>
+                <span id="users-page-info">Página 1</span>
+                <button type="button" class="admin-btn admin-btn--small" id="users-next-btn">Próxima →</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== MODAL: Edit User ===== -->
+    <div id="user-edit-modal" class="admin-modal" style="display: none;">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3>Editar usuário</h3>
+                <button type="button" class="admin-modal-close" onclick="closeUserModal()">✕</button>
+            </div>
+            <div class="admin-modal-body">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" id="edit-user-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="edit-user-email" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Plano</label>
+                    <select id="edit-user-plan">
+                        <option value="">Sem plano</option>
+                        <option value="starter">Starter</option>
+                        <option value="basico">Básico</option>
+                        <option value="profissional">Profissional</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+            </div>
+            <div class="admin-modal-footer">
+                <button type="button" class="admin-btn admin-btn--ghost" onclick="closeUserModal()">Cancelar</button>
+                <button type="button" class="admin-btn admin-btn--primary" onclick="saveUserChanges()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="../js/admin-auth.js"></script>
+    <script src="../js/admin-users.js"></script>
+</body>
+</html>

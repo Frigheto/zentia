@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos — Admin ZENT I.A.</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563eb%22/><text y=%22.82em%22 font-size=%2268%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22white%22 x=%2250%22 text-anchor=%22middle%22>Z</text></svg>">
+</head>
+<body class="admin-page">
+    <!-- ===== HEADER ===== -->
+    <header class="admin-header">
+        <div class="admin-header-inner">
+            <div class="admin-header-left">
+                <h1 class="admin-logo">👑 ZENT<span>I.A.</span></h1>
+                <nav class="admin-nav">
+                    <a href="dashboard.html" class="admin-nav-link">Dashboard</a>
+                    <a href="users.html" class="admin-nav-link">Usuários</a>
+                    <a href="videos.html" class="admin-nav-link active">Vídeos</a>
+                </nav>
+            </div>
+            <div class="admin-header-right">
+                <span class="admin-user-name" id="admin-user-name">—</span>
+                <button type="button" class="admin-btn admin-btn--small admin-btn--danger" onclick="window.adminLogout()">
+                    Sair
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <div class="admin-page-header">
+                <h2 class="admin-page-title">Gerenciar Vídeos</h2>
+                <button type="button" class="admin-btn admin-btn--primary" onclick="openVideoModal()">
+                    + Novo vídeo
+                </button>
+            </div>
+
+            <!-- ===== VIDEOS TABLE ===== -->
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Ep.</th>
+                            <th>Título</th>
+                            <th>Duração</th>
+                            <th>Plano min.</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="videos-tbody">
+                        <tr class="admin-table-loading">
+                            <td colspan="5">Carregando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== MODAL: Edit/Create Video ===== -->
+    <div id="video-modal" class="admin-modal" style="display: none;">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3 id="video-modal-title">Novo vídeo</h3>
+                <button type="button" class="admin-modal-close" onclick="closeVideoModal()">✕</button>
+            </div>
+            <div class="admin-modal-body">
+                <div class="form-group">
+                    <label>Episódio</label>
+                    <input type="number" id="edit-video-episode" min="1" placeholder="1">
+                </div>
+                <div class="form-group">
+                    <label>Título</label>
+                    <input type="text" id="edit-video-title" placeholder="Título do vídeo">
+                </div>
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea id="edit-video-description" rows="3" placeholder="Descrição breve"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Duração</label>
+                    <input type="text" id="edit-video-duration" placeholder="12:30">
+                </div>
+                <div class="form-group">
+                    <label>URL do vídeo</label>
+                    <input type="url" id="edit-video-url" placeholder="https://youtube.com/embed/...">
+                </div>
+                <div class="form-group">
+                    <label>Plano mínimo</label>
+                    <select id="edit-video-plan">
+                        <option value="starter">Starter</option>
+                        <option value="basico">Básico</option>
+                        <option value="profissional">Profissional</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+            </div>
+            <div class="admin-modal-footer">
+                <button type="button" class="admin-btn admin-btn--ghost" onclick="closeVideoModal()">Cancelar</button>
+                <button type="button" class="admin-btn admin-btn--primary" onclick="saveVideo()">Salvar</button>
+                <button type="button" class="admin-btn admin-btn--danger" id="delete-video-btn" style="display: none;" onclick="deleteVideo()">Deletar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="../js/admin-auth.js"></script>
+    <script src="../js/admin-videos.js"></script>
+</body>
+</html>

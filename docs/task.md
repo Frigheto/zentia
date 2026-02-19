@@ -1,0 +1,26 @@
+# Lista de Tarefas (Task List)
+
+- [x] Analisar a estrutura do projeto existente <!-- id: 0 -->
+- [x] Criar Plano de Implementação <!-- id: 1 -->
+- [x] Configurar Estrutura do Projeto (styles.css, pasta assets) <!-- id: 2 -->
+- [x] Implementar Cabeçalho (Logo, Nav, CTA) <!-- id: 3 -->
+- [x] Implementar Seção Hero (Título, Proposta de Valor, CTA, Gráfico Interativo) <!-- id: 4 -->
+- [x] Implementar Seção de Recursos (Abas/Layout em Grid) <!-- id: 5 -->
+- [x] Implementar Seção de Prova Social (Logos, Depoimentos) <!-- id: 6 -->
+- [x] Implementar Seção de Preços/Pagamento <!-- id: 7 -->
+- [x] Implementar Rodapé <!-- id: 8 -->
+- [x] Revisão Final e Polimento <!-- id: 9 -->
+- [x] Configuração do Ambiente de Desenvolvimento (package.json, vite) <!-- id: 10 -->
+- [x] Atualização de Design (Tema Escuro / Azul - InnovareIA) <!-- id: 11 -->
+- [x] Atualização de Branding (Nome: ZENT I.A.) <!-- id: 12 -->
+- [x] Reconstrução para Nicho Jurídico Bancário <!-- id: 13 -->
+- [x] Reconstrução para Nicho Jurídico Geral (Pivot Final) <!-- id: 14 -->
+- [x] Reconstrução para Plataforma de Gestão Completa <!-- id: 15 -->
+- [x] Alinhamento com a Plataforma Real (Sidebar) <!-- id: 16 -->
+- [x] Replicar Visual do Dashboard Real <!-- id: 17 -->
+- [x] Redesign Visual "Zen & Tech" (Glassmorphism/Light) <!-- id: 18 -->
+- [x] Redesign Hero Imersivo (Ref. Montanhas) <!-- id: 19 -->
+- [x] Refinamento Minimalista Global <!-- id: 20 -->
+    - [x] Reduzir textos (Hero, Problema, Features) para "One-liners" <!-- id: 20.1 -->
+    - [x] Aumentar espaçamento (Whitespace) para sensação de "Paz" <!-- id: 20.2 -->
+    - [x] Reposicionar elementos estrategicamente (Foco visual) <!-- id: 20.3 -->
