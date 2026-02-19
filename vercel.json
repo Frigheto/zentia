@@ -1,0 +1,39 @@
+{
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/admin/dashboard.html",
+      "destination": "/admin/dashboard.html"
+    },
+    {
+      "source": "/auth.html",
+      "destination": "/auth.html"
+    },
+    {
+      "source": "/checkout.html",
+      "destination": "/checkout.html"
+    },
+    {
+      "source": "/members.html",
+      "destination": "/members.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    }
+  ]
+}
