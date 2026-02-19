@@ -100,6 +100,20 @@
     }
 
     // ----------------------------------------------------------------
+    // signInWithGoogle — login/signup com Google OAuth
+    // ----------------------------------------------------------------
+    async function signInWithGoogle() {
+        if (!supabase) throw new Error('Supabase não inicializado');
+        var result = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                redirectTo: window.location.origin + '/members.html'
+            }
+        });
+        if (result.error) throw result.error;
+    }
+
+    // ----------------------------------------------------------------
     // requireAuth — redireciona para auth.html se não logado
     // Retorna o usuário se logado.
     // ----------------------------------------------------------------
@@ -232,14 +246,15 @@
     // API pública
     // ----------------------------------------------------------------
     window.zentAuth = {
-        getSession:     getSession,
-        getUser:        getUser,
-        getProfile:     getProfile,
-        signUp:         signUp,
-        signIn:         signIn,
-        signOut:        signOut,
-        requireAuth:    requireAuth,
-        updateHeaderUI: updateHeaderUI
+        getSession:           getSession,
+        getUser:              getUser,
+        getProfile:           getProfile,
+        signUp:               signUp,
+        signIn:               signIn,
+        signOut:              signOut,
+        signInWithGoogle:     signInWithGoogle,
+        requireAuth:          requireAuth,
+        updateHeaderUI:       updateHeaderUI
     };
 
 })();

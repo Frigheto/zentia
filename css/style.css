@@ -3006,6 +3006,49 @@ footer {
     color: var(--primary-dark);
 }
 
+/* Divider com "ou" */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.auth-divider span {
+    margin: 0 0.75rem;
+}
+
+/* Botão Google OAuth */
+.btn-google {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: #fff;
+    color: #333;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+    background: #f9f9f9;
+    border-color: #d1d5db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn-google:active {
+    background: #f0f0f0;
+}
+
 /* Tela de verificação de e-mail */
 .auth-verify-msg {
     text-align: center;

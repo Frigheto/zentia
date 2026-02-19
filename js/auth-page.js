@@ -93,6 +93,32 @@
         document.getElementById('go-to-login').addEventListener('click', function () { activateTab('login'); });
         document.getElementById('back-to-login').addEventListener('click', function () { activateTab('login'); });
 
+        // ---- Google OAuth Buttons ----
+        var googleLoginBtn = document.getElementById('google-login-btn');
+        var googleSignupBtn = document.getElementById('google-signup-btn');
+
+        if (googleLoginBtn) {
+            googleLoginBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                hideMessage();
+                window.zentAuth.signInWithGoogle().catch(function (err) {
+                    console.error('Erro ao login com Google:', err);
+                    showMessage('Erro ao conectar com Google: ' + (err.message || 'Desconhecido'), 'error');
+                });
+            });
+        }
+
+        if (googleSignupBtn) {
+            googleSignupBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                hideMessage();
+                window.zentAuth.signInWithGoogle().catch(function (err) {
+                    console.error('Erro ao criar conta com Google:', err);
+                    showMessage('Erro ao conectar com Google: ' + (err.message || 'Desconhecido'), 'error');
+                });
+            });
+        }
+
         // ---- Verifica se veio com ?tab=register ----
         var params = new URLSearchParams(window.location.search);
         if (params.get('tab') === 'register') activateTab('register');
