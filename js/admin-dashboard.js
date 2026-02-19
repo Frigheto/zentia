@@ -36,12 +36,27 @@
 
     async function loadDashboardData() {
         try {
+            console.log('[Admin Dashboard] Iniciando carregamento de dados...');
+
             // Busca todos os perfis de usuários
             const { data: profiles, error } = await supabase
                 .from('profiles')
                 .select('id, plan');
 
-            if (error) throw error;
+            if (error) {
+                console.error('[Admin Dashboard] Erro na query profiles:', error);
+                console.error('[Admin Dashboard] Status:', error.status);
+                console.error('[Admin Dashboard] Code:', error.code);
+                console.error('[Admin Dashboard] Message:', error.message);
+                throw error;
+            }
+
+            if (!profiles) {
+                console.warn('[Admin Dashboard] Nenhum perfil retornado (profiles é null)');
+                profiles = [];
+            }
+
+            console.log('[Admin Dashboard] Perfis carregados:', profiles.length);
 
             // Calcula métricas
             const metrics = {
@@ -90,9 +105,19 @@
                 document.getElementById(`plan-${plan}-fill`).style.width = percentage + '%';
             });
 
+            console.log('[Admin Dashboard] Dashboard carregado com sucesso');
+
         } catch (error) {
-            console.error('Erro ao carregar dashboard:', error);
-            alert('Erro ao carregar dados do dashboard');
+            console.error('[Admin Dashboard] ERRO CRÍTICO:', error);
+            console.error('[Admin Dashboard] Stack:', error.stack);
+
+            // Mostra mensagem de erro na página
+            document.getElementById('metric-total-users').textContent = 'ERRO';
+            document.getElementById('metric-active-subs').textContent = 'ERRO';
+            document.getElementById('metric-no-plan').textContent = 'ERRO';
+            document.getElementById('metric-revenue').textContent = 'ERRO';
+
+            alert('❌ Erro ao carregar dashboard:\n\n' + (error.message || 'Erro desconhecido') + '\n\nAbra o console (F12) para mais detalhes.');
         }
     }
 })();

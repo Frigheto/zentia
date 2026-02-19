@@ -59,6 +59,23 @@
             }
         });
         if (result.error) throw result.error;
+
+        // Cria registro em profiles automaticamente após signup
+        if (result.data && result.data.user && result.data.user.id) {
+            try {
+                await supabase.from('profiles').insert({
+                    id: result.data.user.id,
+                    email: email,
+                    full_name: name || '',
+                    plan: null
+                });
+                console.log('[Auth] Perfil criado em profiles:', result.data.user.id);
+            } catch (profileError) {
+                console.error('[Auth] Erro ao criar perfil:', profileError);
+                // Não bloqueia o signup se falhar criar o perfil
+            }
+        }
+
         return result.data;
     }
 
